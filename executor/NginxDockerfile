@@ -1,0 +1,8 @@
+FROM nginx
+
+COPY ./default.conf /etc/nginx/conf.d
+RUN apt-get update
+RUN apt-get install net-tools -y
+RUN apt-get install iputils-ping -y
+RUN apt-get install curl -y
+RUN apt-get install vim -y
